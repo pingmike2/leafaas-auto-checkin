@@ -92,7 +92,7 @@ class LeaflowAutoCheckin:
         logger.info(f"开始登录流程")
         
         # 访问登录页面
-        self.driver.get("https://leaflow.net/login")
+        self.driver.get("https://leafaas.com/login")
         time.sleep(5)  # 增加初始等待时间
         
         # 关闭弹窗
@@ -321,7 +321,7 @@ class LeaflowAutoCheckin:
         logger.info("跳转到签到页面...")
         
         # 跳转到签到页面
-        self.driver.get("https://checkin.leaflow.net")
+        self.driver.get("https://checkin.leafaas.com")
         
         # 等待签到页面加载（最多重试3次，每次等待20秒）
         if not self.wait_for_checkin_page_loaded(max_retries=3, wait_time=20):
